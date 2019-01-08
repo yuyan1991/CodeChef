@@ -28,7 +28,7 @@ void form() {
 void solve() {
     // 当1<=n<=2，容易验证不管怎么做都好，M只能为0，所以答案就是p*p*p
     if (n<3) 
-        ans = (int64)p * p;
+        ans = (int64)p * p * p;
     else {
         ans = 0;
         // 当n>3时，M=(n-1)/2，因为我们要让M达到最大，只需要用到下面三种方法即可
@@ -49,7 +49,7 @@ int main() {
     for (;T;T--) {
         scanf("%d%d",&n,&p);
         solve();
-        printf("%I64d\n", ans);
+        printf("%lld\n", ans);
     }
     return 0;
 }
